@@ -44,7 +44,7 @@ One additional note we might want to make here is that we generally define a wei
 
 One additional feature that might be of interest when interpreting the model is to evaluate how much variability is explained by each of our principal components. This can be done by comparing the variance in the residuals for the $i^{th}$ component with the variance of the initial $X$ matrix. As the algorithm goes on, progressively less and less variance in $X$ will be left unexplained, and $R^2$ will increase. The same can be done for $Y$. These $R^2$ values can also be computed column by column, for both $X$ and $Y$, such that we can look specifically at linkages between specific predictors in $X$, or predicted variables in $Y$, and principal components individually. <br><br>
 
-## Variants for NIPALS
+## Variants of NIPALS
 
 A few words can be said on NIPALS variants that were developed to increase computational speed or to address specific case studies. For example, SIMPLS (which stands for statistically inspired modification of PLS), is a faster alternative to NIPALS that proceeds slightly differently during the deflation process. Indeed, it deflates the crossproduct matrix of $X$ and $Y$ as opposed to deflating $X$ and $Y$ individually as we did for NIPALS. Other kernel-based methods have been developed to address specific cases such as datasets where observations ($N$) are much more numerous than predictors $K$. Typically, the choice of the algorithm will have only minor influence of the model quality. This is especially true when $Y$ contains a single column (dependent variable), as is often the case, for example, in soil spectroscopy.  <br><br>
 
